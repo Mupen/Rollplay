@@ -1,0 +1,14 @@
+Open Collection tab 
+Create a macro 
+Name macros Initiative, Attack, Attack-Pc, Attack-Vehicles in that order
+Post the following in the box
+
+/em Roll for Initiative  [[(((@{selected|perception}+@{selected|Initiative_+}) - (1+@{selected|Initiative_-}))d6 + 1d6! + @{selected|perceptionpip}) &{tracker} ]]
+
+/em Roll for Attack with [[ (?{Modifier|0} - 1)d6 + 1d6! + ?{Weapons_Skill_Pip|0}) ]]
+
+/em Roll for Attack with @{selected|Weapons_Name} [[ (@{selected|Weapons_Skill_Dice} - 1)d6 + 1d6! + @{selected|Weapons_Skill_Pip}) ]]
+
+/em Roll for Attack with @{selected|Vehicles_Name} [[ (@{selected|Vehicles_Skill_Dice} - 1)d6 + 1d6! + @{selected|Vehicles_Skill_Pip}) ]]
+
+When click the show as token action box on all of them.

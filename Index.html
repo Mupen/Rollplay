@@ -1,0 +1,1099 @@
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab1" value="1" title="Core" checked="checked" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab2" value="2" title="Equipment" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab3" value="3" title="Talents" />
+<input type="radio" name="attr_tab" class="sheet-tab sheet-tab4" value="4" title="Additional" />
+
+
+<div class="sheet-tab-br"></div>
+
+
+
+<!-- Tab 1 -->
+<div class="sheet-tab-content sheet-tab1">
+    <div class="sheet-wrapper">
+        <!-- Basic Character Information -->
+        <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+        <div class="sheet-wrapper">
+            <!-- imgur / img -->
+            <img src="https://shonduras.com/wp-content/uploads/2014/10/Star-Wars-Logo.png" title="source: imgur.com" alt="(Daniel's edition) BLOOD TO THE BLOOD GOD!" style="width: 100%;" height="100%" />
+        </div>
+
+        <div class="sheet-3colrow">
+            <!-- Left Column  -->
+            <div class="sheet-col">
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:20%"><label>Player:</label></div>
+                    <div class="sheet-item" style="width:75%"><input name="attr_character_player" type="text"></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:30%"><label>Occupation:</label></div>
+                    <div class="sheet-item" style="width:65%"><input name="attr_character_occupation" type="text"></div>
+                </div>
+            </div>
+        
+            <!-- Mid Column -->
+            <div class="sheet-col">
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:20%"><label>Name:</label></div>
+                    <div class="sheet-item" style="width:75%"><input name="attr_character_name" type="text"></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:20%"><label>Gender:</label></div>
+                    <div class="sheet-item" style="width:28%"><input name="attr_character_gender" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:20%"><label>Age:</label></div>
+                    <div class="sheet-item" style="width:28%"><input name="attr_character_age" type="number" style="text-align: center;"></div>
+                </div>
+            </div>
+            
+            <!-- Right Column  -->   
+             <div class="sheet-col">
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:30%"><label>Species:</label></div>
+                    <div class="sheet-item" style="width:65%"><input name="attr_character_species" type="text"></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:20%"><label>Height:</label></div>
+                    <div class="sheet-item" style="width:28%"><input name="attr_character_height" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:20%"><label>Weight:</label></div>
+                    <div class="sheet-item" style="width:28%"><input name="attr_character_weight" type="number" style="text-align: center;"></div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="sheet-1colrow">
+            <div class="sheet-col">
+                <img src="http://imgsrv.roll20.net/?src=i.imgur.com/TKfHnQ9.png">
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Notes" placeholder="Character Description" style="height: 100px;"></textarea>
+                </div>
+                <img src="http://imgsrv.roll20.net/?src=i.imgur.com/TKfHnQ9.png">
+            </div>
+        </div>
+                        
+        <!-- First Part = Characteristics\Experience&Fate\Insanity&Corruption\Skills -->
+        <!--%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-->
+
+        <div class="sheet-2colrow">
+            <br>
+            <div class="sheet-col">
+                <h3>Perception</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Perception:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_perception" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_perceptionpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_perception_roll" value="/em Perception  [[(@{perception} - 1)d6 + 1d6! + @{perceptionpip}]]"></button></div>
+
+                    <fieldset class="repeating_percskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_percskillname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_percskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_percskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_percskills_roll" value="/em @{percskillname} [[(@{percskilldice} - 1)d6 + 1d6! + @{percskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+            <div class="sheet-col">
+                <h3>Agility</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Agility:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_agility" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_agilitypip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_agility_roll" value="/em Agility  [[(@{agility} - 1)d6 + 1d6! + @{agilitypip}]]"></button></div>
+
+                    <fieldset class="repeating_agilskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_agilskillname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_agilskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_agilskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_agilskills_roll" value="/em @{agilskillname} [[(@{agilskilldice} - 1)d6 + 1d6! + @{agilskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="sheet-2colrow">
+            <br>
+            <div class="sheet-col">
+                <h3>Strength</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Strength:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_strength" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_strengthpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_strength_roll" value="/em Strength  [[(@{strength} - 1)d6 + 1d6! + @{strengthpip}]]"></button></div>
+
+                    <fieldset class="repeating_strskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_strskillname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_strskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_strskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_strskills_roll" value="/em @{strskillname} [[(@{strskilldice} - 1)d6 + 1d6! + @{strskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="sheet-col">
+                <h3>Knowledge</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Knowledge:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_knowledge" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_knowledgepip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_knowledge_roll" value="/em Knowledge  [[(@{knowledge} - 1)d6 + 1d6! + @{knowledgepip}]]"></button></div>
+
+                    <fieldset class="repeating_knowskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_knowskillname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_knowskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_knowskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_knowskills_roll" value="/em @{knowskillname} [[(@{knowskilldice} - 1)d6 + 1d6! + @{knowskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="sheet-2colrow">
+            <br>
+            <div class="sheet-col">
+                <h3>Technical</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Technical:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_technical" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_technicalpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_technical_roll" value="/em Technical  [[(@{technical} - 1)d6 + 1d6! + @{technicalpip}]]"></button></div>
+
+                    <fieldset class="repeating_techskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_techskillname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_techskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_techskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_techskills_roll" value="/em @{techskillname} [[(@{techskilldice} - 1)d6 + 1d6! + @{techskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+
+            <div class="sheet-col">
+                <h3>Mechanical</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Mechanical:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_mechanical" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_mechanicalpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_mechanical_roll" value="/em Mechanical  [[(@{mechanical} - 1)d6 + 1d6! + @{mechanicalpip}]]"></button></div>
+
+                    <fieldset class="repeating_mechskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_mechskillsname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_mechskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_mechskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_mechskills_roll" value="/em @{mechskillsname} [[(@{mechskilldice} - 1)d6 + 1d6! + @{mechskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="sheet-1colrow">
+            <br>
+            <div class="sheet-col">
+                <h3>Metaphysics</h3>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Metaphysics:</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_metaphysics" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                    <div class="sheet-item" style="width:20%"><input name="attr_metaphysicspip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                    <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_metaphysics_roll" value="/em Metaphysics  [[(@{metaphysics} - 1)d6 + 1d6! + @{metaphysicspip}]]"></button></div>
+
+                    <fieldset class="repeating_metaphysicskills">
+                        <div class="sheet-item" style="width:40%"><input name="attr_metaphysicskillname" type="text"></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_metaphysicskilldice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                        
+                        <div class="sheet-item" style="width:10%"><label>D+</label></div>
+
+                        <div class="sheet-item" style="width:20%"><input name="attr_metaphysicskillpip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+
+                        <div class="sheet-item" style="width:10%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_metaphysicskill_roll" value="/em @{metaphysicskillname} [[(@{metaphysicskilldice} - 1)d6 + 1d6! + @{metaphysicskillpip}]]"></button></div>
+                    </fieldset>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="sheet-2colrow">
+            <br>
+            <h3>Misc</h3>
+            <div class="sheet-col">
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Founds (D):</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_founds" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Credits:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_credits" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Fate Points:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_fatePoints" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Character Points:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_characterPoints" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Strength Damage:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_strengthDamage" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Move:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_move" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Body Points:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_bodyPoints" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+            </div>
+
+            <div class="sheet-col">
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Stunned:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_stunned" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Wounded:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_wounded" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Severely Wounded:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_severelyWounded" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Incapacitated:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_incapacitated" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Mortally Wounded:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_mortallyWounded" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:75%"><label>Dead:</label></div>
+                    <div class="sheet-item" style="width:20%"><input name="attr_dead" type="number" style="text-align: center;" min="0" value="0"/></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:49%"><label>Initiative (perception):</label></div>
+
+                    <div class="sheet-item" style="width:3%"><label>+</label></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Initiative_+" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:3%"><label>-</label></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Initiative_-" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    
+                    <div class="sheet-item" style="width:20%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Initiative_roll" value="/em @{character_name} Roll for Initiative  [[(((@{perception}+@{Initiative_+}) - (1+@{Initiative_-}))d6 + 1d6! + @{perceptionpip}) &{tracker} ]]"></button></div>
+                </div>
+            </div>
+            <br>
+        </div>
+
+        <div class="sheet-1colrow">
+            <div class="sheet-col">
+                <img src="http://imgsrv.roll20.net/?src=i.imgur.com/TKfHnQ9.png">
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Weapon_and_Armor" placeholder="Characters armor and weapon Notes" style="height: 100px;"></textarea>
+                </div>
+                <img src="http://imgsrv.roll20.net/?src=i.imgur.com/TKfHnQ9.png">
+            </div>
+        </div>
+
+        <div class="sheet-1colrow">
+            <br><h3>Weapons</h3><br>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:40%"><label>Name:</label></div>
+                <div class="sheet-item" style="width:10%"><label>Type:</label></div>
+                <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                <div class="sheet-item" style="width:3%"></div>
+                <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                <div class="sheet-item" style="width:15%"><label>Range:</label></div>
+                <div class="sheet-item" style="width:10%"><label>Ammo:</label></div>
+                <div class="sheet-item" style="width:5%"><label>Hit:</label></div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:40%"><input name="attr_Weapons_Name" type="text" placeholder="Name of weapon *used for macro*"></div>
+                <div class="sheet-item" style="width:10%">
+                    <select name="attr_Weapons_Type">
+                        <option value="0">Ranged</option>
+                        <option value="0">Melee</option>
+                    </select>
+                </div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Skill_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Skill_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                <div class="sheet-item" style="width:15%"><input name="attr_Weapons_Range" type="text"  placeholder="10/60/120"></div>
+                <div class="sheet-item" style="width:10%"><input name="attr_Weapons_Ammo" type="number"></div>
+                <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Weapons_Skill_roll" value="/em @{Weapons_Name} Hit [[(@{Weapons_Skill_Dice} - 1)d6 + 1d6! + @{Weapons_Skill_Pip}]]"></button></div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:10%"></div>
+                <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                <div class="sheet-item" style="width:3%"></div>
+                <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                <div class="sheet-item" style="width:65%"><label>Notes:</label></div>
+                <div class="sheet-item" style="width:5%"><label>Damage:</label></div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:10%"><label>Damage:</label></div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Damage_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Damage_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                <div class="sheet-item" style="width:65%"><input name="attr_Weapons_Notes_1" type="text"></div>
+                <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Weapons_Damage_roll" value="/em @{Weapons_Name} Damage [[(@{Weapons_Damage_Dice} - 1)d6 + 1d6! + @{Weapons_Damage_Pip}]]"></button></div>
+            </div>
+
+            <fieldset class="repeating_WeaponsItem">
+                <br><br>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Name:</label></div>
+                    <div class="sheet-item" style="width:10%"><label>Type:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                    <div class="sheet-item" style="width:3%"></div>
+                    <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                    <div class="sheet-item" style="width:15%"><label>Range:</label></div>
+                    <div class="sheet-item" style="width:10%"><label>Ammo:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Hit:</label></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><input name="attr_Weapons_Name" type="text" placeholder="Name of weapon"></div>
+                    <div class="sheet-item" style="width:10%">
+                        <select name="attr_Weapons_Type">
+                            <option value="0">Ranged</option>
+                            <option value="0">Melee</option>
+                        </select>
+                    </div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Skill_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Skill_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                    <div class="sheet-item" style="width:15%"><input name="attr_Weapons_Range" type="text"  placeholder="10/60/120"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Weapons_Ammo" type="number"></div>
+                    <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Weapons_Skill_roll" value="/em @{Weapons_Name} [[(@{Weapons_Skill_Dice} - 1)d6 + 1d6! + @{Weapons_Skill_Pip}]]"></button></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:10%"></div>
+                    <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                    <div class="sheet-item" style="width:3%"></div>
+                    <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                    <div class="sheet-item" style="width:65%"><label>Notes:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Damage:</label></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:10%"><label>Damage:</label></div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Damage_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Weapons_Damage_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                    <div class="sheet-item" style="width:65%"><input name="attr_Weapons_Notes_1" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Weapons_Damage_roll" value="/em @{Weapons_Name} [[(@{Weapons_Damage_Dice} - 1)d6 + 1d6! + @{Weapons_Damage_Pip}]]"></button></div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="sheet-1colrow">
+            <br><h3>Vehicles</h3><br>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:40%"><label>Name:</label></div>
+                <div class="sheet-item" style="width:10%"><label>Type:</label></div>
+                <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                <div class="sheet-item" style="width:3%"></div>
+                <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                <div class="sheet-item" style="width:15%"><label>Range:</label></div>
+                <div class="sheet-item" style="width:10%"><label>Ammo:</label></div>
+                <div class="sheet-item" style="width:5%"><label>Hit:</label></div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:40%"><input name="attr_Vehicles_Name" type="text" placeholder="Name of weapon *used for macro*"></div>
+                <div class="sheet-item" style="width:10%">
+                    <select name="attr_Vehicles_Type">
+                        <option value="0">Ranged</option>
+                        <option value="0">Melee</option>
+                    </select>
+                </div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Skill_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Skill_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                <div class="sheet-item" style="width:15%"><input name="attr_Vehicles_Range" type="text"  placeholder="10/60/120"></div>
+                <div class="sheet-item" style="width:10%"><input name="attr_Vehicles_Ammo" type="number"></div>
+                <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Vehicles_Skill_roll" value="/em @{Vehicles_Name} Hit [[(@{Vehicles_Skill_Dice} - 1)d6 + 1d6! + @{Vehicles_Skill_Pip}]]"></button></div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:10%"></div>
+                <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                <div class="sheet-item" style="width:3%"></div>
+                <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                <div class="sheet-item" style="width:65%"><label>Notes:</label></div>
+                <div class="sheet-item" style="width:5%"><label>Damage:</label></div>
+            </div>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:10%"><label>Damage:</label></div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Damage_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Damage_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                <div class="sheet-item" style="width:65%"><input name="attr_Vehicles_Notes_1" type="text"></div>
+                <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Vehicles_Damage_roll" value="/em @{Vehicles_Name} Damage [[(@{Vehicles_Damage_Dice} - 1)d6 + 1d6! + @{Vehicles_Damage_Pip}]]"></button></div>
+            </div>
+
+            <fieldset class="repeating_VehiclesItem">
+                <br><br>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><label>Name:</label></div>
+                    <div class="sheet-item" style="width:10%"><label>Type:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                    <div class="sheet-item" style="width:3%"></div>
+                    <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                    <div class="sheet-item" style="width:15%"><label>Range:</label></div>
+                    <div class="sheet-item" style="width:10%"><label>Ammo:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Hit:</label></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:40%"><input name="attr_Vehicles_Name" type="text" placeholder="Name of weapon"></div>
+                    <div class="sheet-item" style="width:10%">
+                        <select name="attr_Vehicles_Type">
+                            <option value="0">Ranged</option>
+                            <option value="0">Melee</option>
+                        </select>
+                    </div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Skill_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Skill_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                    <div class="sheet-item" style="width:15%"><input name="attr_Vehicles_Range" type="text"  placeholder="10/60/120"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Vehicles_Ammo" type="number"></div>
+                    <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Vehicles_Skill_roll" value="/em @{Vehicles_Name} [[(@{Vehicles_Skill_Dice} - 1)d6 + 1d6! + @{Vehicles_Skill_Pip}]]"></button></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:10%"></div>
+                    <div class="sheet-item" style="width:5%"><label>Dice:</label></div>
+                    <div class="sheet-item" style="width:3%"></div>
+                    <div class="sheet-item" style="width:5%"><label>Pip:</label></div>
+                    <div class="sheet-item" style="width:65%"><label>Notes:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Damage:</label></div>
+                </div>
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:10%"><label>Damage:</label></div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Damage_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+                    <div class="sheet-item" style="width:3%"><label>D+</label></div>
+                    <div class="sheet-item" style="width:5%"><input name="attr_Vehicles_Damage_Pip" type="number" style="text-align: center;" min="0" max="2" value="0"/></div>
+                    <div class="sheet-item" style="width:65%"><input name="attr_Vehicles_Notes_1" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><button class="sheet-skill-roll btn ui-draggable" type="roll" name="roll_Vehicles_Damage_roll" value="/em @{Vehicles_Name} [[(@{Vehicles_Damage_Dice} - 1)d6 + 1d6! + @{Vehicles_Damage_Pip}]]"></button></div>
+                </div>
+            </fieldset>
+        </div>
+
+        <div class="sheet-1colrow">
+            <br><br>
+            <h3>Armor</h3>
+            <div class="sheet-row">
+                <div class="sheet-item" style="width:35%"><input name="attr_Armor" type="text" placeholder="Armor type"></div>
+
+                <div class="sheet-item" style="width:5%"><input name="attr_Armor_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+
+                <div class="sheet-item" style="width:10%"><label>Notes:</label></div>
+
+                <div class="sheet-item" style="width:43%"><input name="attr_Armor_Notes" type="text"  placeholder="stamina, physical, energy, plasma,"></div>
+
+                <fieldset class="repeating_Armor">
+                    <div class="sheet-item" style="width:35%"><input name="attr_Armor" type="text" placeholder="Armor type"></div>
+
+                    <div class="sheet-item" style="width:5%"><input name="attr_Armor_Dice" type="number" style="text-align: center;" min="0" value="3"/></div>
+
+                    <div class="sheet-item" style="width:10%"><label>Notes:</label></div>
+ 
+                    <div class="sheet-item" style="width:43%"><input name="attr_Armor_Notes" type="text"  placeholder="stamina, physical, energy, plasma,"></div>
+
+                </fieldset>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Tab 2 -->
+<div class="sheet-tab-content sheet-tab2">
+    <div class="sheet-wrapper">
+        <div class="sheet-1colrow">
+            <div class="sheet-col">
+                <img src="http://imgsrv.roll20.net/?src=i.imgur.com/TKfHnQ9.png">
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Gear_Notes" placeholder="Equipment Notes" style="height: 100px;"></textarea>
+                </div>
+                <img src="http://imgsrv.roll20.net/?src=i.imgur.com/TKfHnQ9.png">
+            </div>
+        </div>
+        <br>
+        <h3>Equipment</h3>
+        <br>
+    </div>
+
+    <div class="sheet-wrapper">
+        <div class="sheet-wrapper">  
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><label>Gear Name:</label></div>
+                    <div class="sheet-item" style="width:10%"><label>Amount:</label></div>
+                    <div class="sheet-item" style="width:10%"><label>Refrence:</label></div>
+                    <div class="sheet-item" style="width:5%"><label>Notes:</label></div>
+                </div>  
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_1" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_1" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_1" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_1" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_1" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_1" placeholder="Gear Notes 1" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_2" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_2" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_2" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_2" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_2" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_2" placeholder="Gear Notes 2" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_3" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_3" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_3" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_3" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_3" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_3" placeholder="Gear Notes 3" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_4" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_4" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_4" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_4" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_4" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_4" placeholder="Gear Notes 4" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_5" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_5" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_5" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_5" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_5" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_5" placeholder="Gear Notes 5" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_6" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_6" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_6" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_6" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_6" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_6" placeholder="Gear Notes 6" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_7" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_7" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_7" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_7" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_7" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_7" placeholder="Gear Notes 7" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_8" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_8" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_8" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_8" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_8" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_8" placeholder="Gear Notes 8" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_9" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_9" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_9" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_9" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_9" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_9" placeholder="Gear Notes 9" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_10" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_10" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_10" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_10" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_10" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_10" placeholder="Gear Notes 10" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_11" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_11" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_11" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_11" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_11" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_11" placeholder="Gear Notes 11" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_12" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_12" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_12" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_12" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_12" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_12" placeholder="Gear Notes 12" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_13" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_13" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_13" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_13" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_13" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_13" placeholder="Gear Notes 13" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_14" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_14" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_14" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_14" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_14" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_14" placeholder="Gear Notes 14" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_15" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_15" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_15" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_15" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_15" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_15" placeholder="Gear Notes 15" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <div class="sheet-wrapper">    
+                <div class="sheet-row">
+                    <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_16" type="text"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_16" type="number" style="text-align: center;"></div>
+                    <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_16" type="text"></div>
+                    <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max"    name="attr_Gear_Notes_Formula_Show_16" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                </div>
+                <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_16" type="checkbox">
+                <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                    <textarea class="sheet-charmotive" name="attr_Gear_Notes_16" placeholder="Gear Notes 16" style="height: auto;"></textarea>
+                </div>
+        </div>
+        <fieldset class="repeating_skills">            
+                <div class="sheet-wrapper">    
+                    <div class="sheet-row">
+                        <div class="sheet-item" style="width:70%"><input name="attr_Gear_Name_Repeating" type="text"></div>
+                        <div class="sheet-item" style="width:10%"><input name="attr_Gear_Amount_Repeating" type="number" style="text-align: center;"></div>
+                        <div class="sheet-item" style="width:10%"><input name="attr_Gear_Refrence_Repeating" type="text"></div>
+                        <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Gear_Notes_Formula_Show_Repeating" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+                    </div>
+                    <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Gear_Notes_Formula_Show_Repeating" type="checkbox">
+                    <div class="sheet-item sheet-sect" style="width: 90%; height:  auto;">
+                        <textarea class="sheet-charmotive" name="attr_Gear_Notes_Repeating" placeholder="Gear Notes & Repeating" style="height: auto;"></textarea>
+                    </div>
+                </div>
+        </fieldset>
+    </div>
+</div>
+
+<!-- Tab 4 -->
+<div class="sheet-tab-content sheet-tab3">
+    <br><br>
+    <div class="sheet-wrapper">
+        <br><br>
+        <h3>Talents</h3>
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><label>Talent:</label></div>
+            <div class="sheet-item" style="width:5%"><label>Cp:</label></div>
+            <div class="sheet-item" style="width:5%"><label>Ref:</label></div>
+            <div class="sheet-item" style="width:5%"><label>More:</label></div>
+        </div>
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_1" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_1" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_1" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_1" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_1" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_1" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_1" placeholder="Talents Notes 1" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_2" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_2" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_2" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_2" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_2" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_2" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_2" placeholder="Talents Notes 2" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_3" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_3" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_3" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_3" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_3" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_3" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_3" placeholder="Talents Notes 3" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_4" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_4" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_4" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_4" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_4" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_4" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_4" placeholder="Talents Notes 4" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_5" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_5" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_5" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_5" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_5" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_5" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_5" placeholder="Talents Notes 5" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_6" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_6" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_6" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_6" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_6" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_6" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_6" placeholder="Talents Notes 6" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_7" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_7" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_7" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_7" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_7" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_7" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_7" placeholder="Talents Notes 7" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_8" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_8" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_8" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_8" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_8" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_8" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_8" placeholder="Talents Notes 8" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_9" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_9" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_9" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_9" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_9" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_9" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_9" placeholder="Talents Notes 9" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_10" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_10" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_10" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_10" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_10" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_10" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_10" placeholder="Talents Notes 10" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_11" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_11" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_11" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_11" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_11" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_11" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_11" placeholder="Talents Notes 11" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_12" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_12" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_12" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_12" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_12" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_12" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_12" placeholder="Talents Notes 12" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_13" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_13" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_13" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_13" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_13" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_13" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_13" placeholder="Talents Notes 13" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_14" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_14" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_14" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_14" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_14" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_14" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_14" placeholder="Talents Notes 14" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_15" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_15" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_15" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_15" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_15" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_15" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_15" placeholder="Talents Notes 15" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+    <div class="sheet-wrapper">
+        <div class="sheet-row">
+            <div class="sheet-item" style="width:80%"><input name="attr_Talents_Name_16" type="text"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Cp_16" type="number" value="0"></div>
+            <div class="sheet-item" style="width:5%"><input name="attr_Talents_Refrence_Page_16" type="text"></div>
+            <div class="sheet-item" style="width:5%"><span class="sheet-table-data" style="min-width: 15px"></span><span class="sheet-table-data"><input class="sheet-sect-show" title="Show/Hide Skill Template Formula_max" name="attr_Talents_Formula_Show_16" value="1" style="opacity: 0; cursor: pointer; z-index: 1; position: relative; width: 100%; margin-right: -100%;" type="checkbox"><span></span></span></div>
+        </div>
+        <input class="sheet-sect-show sheet-hidden" value="1" name="attr_Talents_Formula_Show_16" type="checkbox">
+        <div class="sheet-item sheet-sect" style="width: 90%; height: auto;">
+            <input class="sheet-charmotive1" name="attr_Talents_Prerequisites_16" type="text" placeholder="Prerequisites">
+            <textarea class="sheet-charmotive" name="attr_Talents_Notes_16" placeholder="Talents Notes 16" style="margin-bottom: 5px; margin-top: 5px; height: 68px;" type="text"></textarea>
+        </div>
+    </div>
+</div>
+
+
+<!-- Tab 4 -->
+<div class="sheet-tab-content sheet-tab4">
+    <div class="sheet-wrapper">
+        <div class="sheet-2colrow-info">
+            <!-- Left Column  -->
+            <div class="sheet-col">
+                <div class="sheet-row"><div class="sheet-item" style="width:100%"></div></div>
+                <h3>Personality</h3>
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Personality" placeholder="Character Personality" style="height: 200px;"></textarea>
+                </div>
+                <div class="sheet-row"><div class="sheet-item" style="width:100%"></div></div>
+                <h3>Objectives</h3>
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Objectives" placeholder="Character Objectives" style="height: 200px;"></textarea>
+                </div>
+                <div class="sheet-row"><div class="sheet-item" style="width:100%"></div></div>
+                <h3>Native Language</h3>
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Native Language" placeholder="Character Native Language" style="height: 200px;"></textarea>
+                </div>
+                <div class="sheet-row"><div class="sheet-item" style="width:100%"></div></div>
+            </div>
+            <!-- Right Column  -->   
+            <div class="sheet-col">
+                <div class="sheet-row"><div class="sheet-item" style="width:100%"></div></div>
+                <h3>Other Information</h3>
+                <div class="sheet-charmotive sheet-tcenter">
+                    <textarea class="sheet-charmotive" name="attr_character_Other Information" placeholder="Character Other Information" style="height: 600px;"></textarea>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
